@@ -8,8 +8,9 @@ header{
     background-color: #4A2A2A;
     width: 98%;
     height: 75px;
-    padding: 1%;
-    padding-left: 400px;
+    padding: 18px;
+    padding-left: 380px;
+    padding-right: 380px;
     position: fixed;
     z-index: 999;
 
@@ -23,7 +24,7 @@ header{
             display: flex;
             font-size: 20px;
             margin-top: 28px;
-            gap: 3%;
+            gap: 55px;
             justify-content:center ;
             list-style: none;
             width: 1350px;
@@ -70,7 +71,7 @@ main{
 .produto{
     
     background-color: #F5E6D3;
-    width: 18%;
+    width: 335px;
     height: 380px;
     padding: 0.5%;
     display: flex;
@@ -115,10 +116,52 @@ main{
                 }
 footer{
     background-color: #4A2A2A;
-    height: 400px;
+    height: 300px;
+    padding: 18px;
+    padding-left: 400px;
+    padding-right: 400px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    color: white;
 }
+
+    .footer-col h3,
+    .footer-col h4{
+        margin-bottom: 15px;
+    }
+
+        .footer-col p{
+            font-size: 14px;
+            line-height: 1.6;
+            
+        }
+
+            .footer-col ul{
+                list-style: none;
+                padding: 0;
+                
+            }
+
+                .footer-col ul li{
+                    margin-bottom: 8px;
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+
+                    .footer-col ul li a{
+                        text-decoration: none;
+                        color: #ccc;
+                        transition: 0.3s;
+
+                    }
+
+                        .footer-col ul li a:hover{
+                            color: #C9A227;
+                        }
 #direitos{
     text-align: center;
     color: white;
-    
+    background-color: #4A2A2A;
+
 }
