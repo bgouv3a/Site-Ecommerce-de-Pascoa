@@ -7,27 +7,28 @@
 header{
     background-color: #4A2A2A;
     width: 98%;
-    height: 75px;
+    height: 70px;
     padding: 18px;
-    padding-left: 380px;
-    padding-right: 380px;
+    padding-left: 15%;
     position: fixed;
     z-index: 999;
-
+    display: flex;
+    align-items: center;
 }
+    
     .logo{
         height: 72px;
         float: left;
         cursor: pointer;
+        
     }
         header ul{
             display: flex;
             font-size: 20px;
-            margin-top: 28px;
             gap: 55px;
             justify-content:center ;
             list-style: none;
-            width: 1350px;
+            margin-left: 17%;
             
 
         }
@@ -45,12 +46,12 @@ header{
 #banner{
 
     width: 100%;
-    margin-top: 110px;
+    margin-top: 105px;
 }
 
 main{
     background-color: #F5E6D3;
-    height: 1600px;
+    height: 1700px;
 }
     #nossosProdutos{
         text-align: center;
@@ -61,7 +62,6 @@ main{
 
 .produtos{
     background-color: #F5E6D3;
-   
     display:flex;
     justify-content:center;
     margin-top: -10px;
@@ -71,8 +71,8 @@ main{
 .produto{
     
     background-color: #F5E6D3;
-    width: 335px;
-    height: 380px;
+    width: 20%;
+    height: 340px;
     padding: 0.5%;
     display: flex;
     float: left;
@@ -118,11 +118,11 @@ footer{
     background-color: #4A2A2A;
     height: 300px;
     padding: 18px;
-    padding-left: 400px;
-    padding-right: 400px;
+    padding-left: 15%;
+    padding-right: 15%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    gap: 80px;
     color: white;
 }
 
@@ -151,7 +151,7 @@ footer{
 
                     .footer-col ul li a{
                         text-decoration: none;
-                        color: #ccc;
+                        color: #ffffff;
                         transition: 0.3s;
 
                     }
