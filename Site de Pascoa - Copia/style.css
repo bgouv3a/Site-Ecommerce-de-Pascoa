@@ -51,7 +51,7 @@ header{
 
 main{
     background-color: #F5E6D3;
-    height: 1700px;
+    height: 1800px;
 }
     #nossosProdutos{
         text-align: center;
@@ -71,13 +71,13 @@ main{
 .produto{
     
     background-color: #F5E6D3;
-    width: 20%;
-    height: 340px;
+    width: 21%;
+    height: 350px;
     padding: 0.5%;
     display: flex;
     float: left;
     flex-direction: column;
-    border-radius: 6px;
+    border-radius: 8px;
     margin: 18px;
     color:  #4A2A2A;
     align-items: center;
@@ -90,30 +90,39 @@ main{
 }
     .produto h2{
         float: left;
-        margin-top: 15px;
+        margin-top: 8px;
+        font-size: 18px;
+        margin-left: 8px;
 
     }
         .produto img{
-            height: 60%;
+            height: 67%;
             border-radius: 8px;
             width: 100%;
         }
             .produto button{
                 background-color: #4A2A2A;
                 color: white;
-                border-radius: 4px;
-                width: 55%;
+                border-radius: 6px;
+                width: 45%;
                 align-items: center;
                 border: none;
                 height: 40px;
-                margin-top: 25px;
+                margin-top: -30px;
                 font-size: 18px;
                 cursor: pointer;
                 transition: 0.3s ease;
+                margin-left: 135px;
             }
                 .produto button:hover{
                     background-color: #C9A227;
                 }
+                    .produto p{
+                        font-size: 22px;
+                        margin-top: 25px;
+                        margin-right: 165px;
+                        width: 30%;
+                    }
 footer{
     background-color: #4A2A2A;
     height: 300px;
