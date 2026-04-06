@@ -45,27 +45,23 @@ header{
                     
                     color: #C9A227;
                 }
-@media (max-width: 999px){
-body{
-    overflow-x: hidden;
-}
-.aba-lateral{
+
+#aba-lateral{
     z-index: 9999;
     height: 2150px;
-    width: 30vw;
+    width: 25vw;
     position: absolute;
     background-color: #ffffff;
     display: flex;
-    right: 0;
+    right: -500px;   
     box-shadow: 0 4px 15px rgba(0,0,0,0.6);
     flex-direction: column;
     align-items: center;
-    transform: translateX(100%)
-} 
-}   
-    .aba-lateral.active{
-        transform: translateX(0);
-    }            
+    
+}  
+#aba-lateral.ativo{
+    right: 0;
+}       
 #banner{
 
     width: 100%;
@@ -94,7 +90,7 @@ main{
 .produto{
     
     background-color: #F5E6D3;
-    width: 21%;
+    width: 23%;
     height: 350px;
     padding: 0.5%;
     display: flex;
