@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   
+   <!--HEADER-->
     <header>
         <a href=""><img src="./fotos/logo.png" class="logo" alt=""></a> 
         
@@ -19,16 +19,30 @@
                 <li><a href="#">Contatos</a></li>
                 <li><a href="#" id="botaoAbrir"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
                 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-                </svg></a></li>
+                </svg>
+                <span id="contadorCarrinho">0</span>
+                </a></li>
 
             </ul>
 
     </header>
+    <!--CARRINHO DE COMPRARS-->
+    <aside id="carrinho">
+        <div class="carrinho-header">
+            <h2>Seu Carrinho</h2>
+            <button id="fecharCarrinho">✕</button>
+        </div>
 
-    <aside id="aba-lateral">
-<p>a</p>
+        <div id="itensCarrinho">
+            <!-- Os produtos vao aparece pelo JS -->
+        </div>
+
+        <div class="carrinho-footer">
+            <h3>Total: <span id="precoTotal">R$ 0,00</span></h3>
+            <button id="finalizar-Compra">Finalizar Compra</button>
+        </div>
     </aside>
-    
+    <!--MAIN-->
     <main>
         <img src="./fotos/banner4.jpg" id="banner" alt="">
 
@@ -41,21 +55,21 @@
                 <img src="./fotos/ovo1_gouvea.png" alt="">
                 <h2>Ovo de Pascoa Artesanal com recheio de Caramelo 370g</h2>
                 <p>R$199,90</p>
-                <button>Comprar</button>
+                <button class="btn-comprar">Comprar</button>
     
             </div>
             <div class="produto">
                 <img src="./fotos/ovo3_gouvea.png" alt="">
                 <h2>Ovo de Pascoa Artesanal com recheio de Coco 300g</h2>
                  <p>R$129,90</p>
-                <button>Comprar</button>
+                <button class="btn-comprar">Comprar</button>
     
             </div>
             <div class="produto">
                 <img src="./fotos/ovo2_gouvea.png" alt="">
                 <h2>Ovo de Pascoa Artesanal com recheio de Blueberry 320g</h2>
                  <p>R$149,90</p>
-                <button>Comprar</button>
+                <button class="btn-comprar">Comprar</button>
     
             </div>
           
@@ -68,21 +82,21 @@
                 <img src="./fotos/ovo4_gouvea.png" alt="">
                 <h2>Ovo de Pascoa Artesanal sabor Meio-Amargo 350g</h2>
                 <p>R$199,90</p>
-                <button>Comprar</button>
+                <button class="btn-comprar">Comprar</button>
     
             </div>
             <div class="produto">
                 <img src="./fotos/ovo5_gouvea.png" alt="">
                 <h2>Ovo de Pascoa Artesanal com recheio de Café 350g</h2>
                  <p>R$179,90</p>
-                <button>Comprar</button>
+                <button class="btn-comprar">Comprar</button>
     
             </div>
             <div class="produto">
                 <img src="./fotos/ovo6_gouvea.png" alt="">
                 <h2>Ovo de Pascoa Artesanal com recheio de Oreo 350g</h2>
                  <p>R$199,90</p>
-                <button>Comprar</button>
+                <button class="btn-comprar">Comprar</button>
     
             </div>
            
@@ -95,21 +109,21 @@
                 <img src="./fotos/ovo7_gouvea.png" alt="">
                 <h2>Ovo de Pascoa Artesanal com recheio de Morango 350g</h2>
                 <p>R$179,90</p>
-                <button>Comprar</button>
+                <button class="btn-comprar">Comprar</button>
     
             </div>
             <div class="produto">
                 <img src="./fotos/ovo8_gouveaAvela.png" alt="">
                 <h2>Ovo de Pascoa Artesanal com recheio de Avela 250g</h2>
                  <p>R$99,90</p>
-                <button>Comprar</button>
+                <button class="btn-comprar">Comprar</button>
     
             </div>
             <div class="produto">
                 <img src="./fotos/ovo9_gouveaPistcahe.png" alt="">
                 <h2>Ovo de Pascoa Artesanal com recheio de Pistache 300g</h2>
                  <p>R$149,90</p>
-                <button>Comprar</button>
+                <button class="btn-comprar">Comprar</button>
     
             </div>
            
@@ -119,7 +133,7 @@
     </main>
 
 
-
+    <!--FO0TER-->
     <footer>
          <a href=""><img src="./fotos/logo.png" class="logo" alt=""></a> 
         
