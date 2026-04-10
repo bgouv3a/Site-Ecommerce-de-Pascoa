@@ -61,7 +61,7 @@ header{
     flex-direction: column;
     align-items: center;
     transition: 0.3s ease;
-    
+
     
     
 }
@@ -150,7 +150,7 @@ header{
                     color: #C9A227;
                 }
 
-    /* BOTÕES DE QUANTIDADE */
+    
     .carrinho-item-quantidade {
         display: flex;
         align-items: center;
@@ -199,7 +199,6 @@ header{
                             color: #C9A227;
                         }
 
-    /* CARRINHO VAZIO */
     .carrinho-vazio {
         color: rgba(74, 42, 42, 0.5);
         font-size: 14px;
@@ -262,8 +261,19 @@ main{
         margin-top: 50px;
         margin-bottom: 50px;
         color: #4A2A2A;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        justify-content: center;
     }
-
+        #nossosProdutos::before,
+        #nossosProdutos::after {
+            content: "";
+            flex: 1;
+            max-width: 30%;
+            height: 2.5px;
+            background-color: #4A2A2A; 
+        }
 .produtos{
     background-color: #F5E6D3;
     display:flex;
