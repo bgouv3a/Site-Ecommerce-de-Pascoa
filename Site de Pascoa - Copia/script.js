@@ -20,9 +20,11 @@ let carrinhoItens = []
 // Abre e fecha o carrinho
 botaoAbrir.addEventListener("click", function () {
     carrinho.classList.add("ativo")
+    overlay.classList.add("ativo");
 })
 botaoFechar.addEventListener("click", function () {
     carrinho.classList.remove("ativo")
+    overlay.classList.remove("ativo");
 })
 
 // Pega todos os botoes de comprar e coloca um evento em cada um
@@ -34,11 +36,11 @@ for (let i = 0; i < botoesComprar.length; i++) {
     })
 }
 
-// Adiciona o produto ao carrinho
+// adiciona o produto ao carrinho
 function adicionarAoCarrinho(indice) {
     let produto = produtos[indice]
 
-    // Procura se o produto ja esta no carrinho
+    // procura se o produto ja esta no carrinho
     let jaEstaNoCarrinho = false
     for (let i = 0; i < carrinhoItens.length; i++) {
         if (carrinhoItens[i].id == produto.id) {
@@ -47,7 +49,7 @@ function adicionarAoCarrinho(indice) {
         }
     }
 
-    // Se nao estiver, adiciona ele
+    // se nao estiver, adiciona ele
     if (jaEstaNoCarrinho == false) {
         let novoItem = {
             id: produto.id,
