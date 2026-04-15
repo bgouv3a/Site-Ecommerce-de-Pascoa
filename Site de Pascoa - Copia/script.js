@@ -14,10 +14,10 @@ const produtos = [
   { id: 9, imagem: "./fotos/ovo9_gouveaPistcahe.png", nome: "Ovo de Pascoa Artesanal com recheio de Pistache 300g", preco: 149.90 }
 ];
 
-// Array que vai guardar os produtos adicionados ao carrinho
+// array do carrinho
 let carrinhoItens = []
 
-// Abre e fecha o carrinho
+// abre e fecha o carrinho
 botaoAbrir.addEventListener("click", function () {
     carrinho.classList.add("ativo")
     overlay.classList.add("ativo");
@@ -27,7 +27,7 @@ botaoFechar.addEventListener("click", function () {
     overlay.classList.remove("ativo");
 })
 
-// Pega todos os botoes de comprar e coloca um evento em cada um
+
 let botoesComprar = document.querySelectorAll(".btn-comprar")
 
 for (let i = 0; i < botoesComprar.length; i++) {
@@ -40,7 +40,6 @@ for (let i = 0; i < botoesComprar.length; i++) {
 function adicionarAoCarrinho(indice) {
     let produto = produtos[indice]
 
-    // procura se o produto ja esta no carrinho
     let jaEstaNoCarrinho = false
     for (let i = 0; i < carrinhoItens.length; i++) {
         if (carrinhoItens[i].id == produto.id) {
@@ -49,7 +48,6 @@ function adicionarAoCarrinho(indice) {
         }
     }
 
-    // se nao estiver, adiciona ele
     if (jaEstaNoCarrinho == false) {
         let novoItem = {
             id: produto.id,
@@ -64,7 +62,7 @@ function adicionarAoCarrinho(indice) {
     atualizarCarrinho()
 }
 
-// Aumenta a quantidade de um item
+// contador do produto
 function aumentarQuantidade(id) {
     for (let i = 0; i < carrinhoItens.length; i++) {
         if (carrinhoItens[i].id == id) {
@@ -74,12 +72,12 @@ function aumentarQuantidade(id) {
     atualizarCarrinho()
 }
 
-// Diminui a quantidade, se chegar a 0 remove o item
+
 function diminuirQuantidade(id) {
     for (let i = 0; i < carrinhoItens.length; i++) {
         if (carrinhoItens[i].id == id) {
             if (carrinhoItens[i].quantidade == 1) {
-                carrinhoItens.splice(i, 1) // remove o item do array
+                carrinhoItens.splice(i, 1)
             } else {
                 carrinhoItens[i].quantidade = carrinhoItens[i].quantidade - 1
             }
@@ -88,26 +86,26 @@ function diminuirQuantidade(id) {
     atualizarCarrinho()
 }
 
-// Remove o item direto
+// remover item do carrinh
 function removerItem(id) {
     for (let i = 0; i < carrinhoItens.length; i++) {
         if (carrinhoItens[i].id == id) {
-            carrinhoItens.splice(i, 1) // remove 1 item na posicao i
+            carrinhoItens.splice(i, 1) 
         }
     }
     atualizarCarrinho()
 }
 
-// Redesenha o carrinho na tela
+//atualiza o carrinho
 function atualizarCarrinho() {
     let itensContainer = document.getElementById("itensCarrinho")
     let precoTotal = document.getElementById("precoTotal")
     let contador = document.getElementById("contadorCarrinho")
 
-    // Limpa o que estava antes
+    
     itensContainer.innerHTML = ""
 
-    // Se o carrinho estiver vazio mostra mensagem
+    
     if (carrinhoItens.length == 0) {
         itensContainer.innerHTML = "<p class='carrinho-vazio'>Seu carrinho está vazio.</p>"
     }
@@ -115,7 +113,7 @@ function atualizarCarrinho() {
     let total = 0
     let totalItens = 0
 
-    // Percorre cada item e cria o HTML dele
+    //html dos iten
     for (let i = 0; i < carrinhoItens.length; i++) {
         let item = carrinhoItens[i]
 
@@ -141,7 +139,7 @@ function atualizarCarrinho() {
         itensContainer.appendChild(div)
     }
 
-    // Atualiza o total e o contador
+    // total
     precoTotal.textContent = "R$ " + total.toFixed(2).replace(".", ",")
     contador.textContent = totalItens
 }
